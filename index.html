@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem solving(Satish)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Problem Solving Questions</h1>
+
+    <h3>Qu 1. Write a program to find the Smaller Angle?</h3>
+<pre>
+  var Minimal_Angle = (h, m) => 
+  {
+      if (h == 12) 
+         h = 0;
+      let hour = 0.5 * (h*60 + m);  
+      let min = 6*m;  
+      let angle;
+      if( hour>min )
+         angle = hour-min
+      else
+         angle = min-hour
+      return angle;
+  };
+</pre>
+    <h3>Qu 2. Write a program to check whether the year is Leap year or not?</h3>
+<pre>
+  var Check_Leap = (year) => 
+  {
+      if ((year%4==0) && (year%100!=0) || (year%400==0))
+        return "Leap Year"
+      else
+        return "Non Leap Year"
+  };
+</pre>
+    <h3>Qu 3. Write a program to find the perfect Number Check?</h3>
+ <pre>
+  var Perfect_Check = (n) => 
+  {
+      let val = (Math.pow(2, n-1)) * ((Math.pow(2,n))-1)
+      if (val == 1)
+         return "YES"
+      else 
+         return "NO"  
+  };
+</pre>
+
+    <h3>Qu 4. Write a program to reverse a Number?</h3>
+<pre>
+  var Reverse_Number = (n) => 
+  {
+      let rem,rev=0;
+      while(n>=1){
+         rem = n%10;
+         rev = rev*10+rem;
+         n=Math.floor(n/10)
+      }
+      return rev;
+  };
+</pre>
+
+    <h3>Qu 5. Write a program to check the substring is present in string or not?</h3>
+<pre> 
+  var Substring_Check = (s1, s2) => 
+  {
+      let index = s1.search(s2)
+      if (index == -1 )
+         return "NO"
+      else
+         return "YES"
+  };
+</pre>
+</body>
+</html>
